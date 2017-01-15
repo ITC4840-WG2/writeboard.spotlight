@@ -1,2 +1,2 @@
-# writeboard.spotlight
-WriteBoard Spotlight Web Portal
+# writeboard.ext
+WriteBoard External Web Portal
