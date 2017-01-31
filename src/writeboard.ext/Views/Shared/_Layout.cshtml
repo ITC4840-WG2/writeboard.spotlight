@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
-    <link runat="server" rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
-    <link runat="server" rel="icon" href="~/favicon.ico" type="image/ico" />
+    <link runat="server" rel="shortcut icon" href="~/fav.ico" type="image/x-icon" />
+    <link runat="server" rel="icon" href="~/fav.ico" type="image/ico" />
 
     <environment names="Development">
         <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -26,7 +26,10 @@
     <div class="w3-top">
         <ul class="w3-navbar w3-card-2" id="wb-navbar">
             <li>
-                <a href="#home" class="w3-wide">WriteBoard</a>
+                <a href="#home" class="w3-wide" id="wb-brand">
+                    <img src="~/images/logo.png" style="height:35px; width:35px;" />
+                    WriteBoard
+                </a>
             </li>
             <!-- Right-sided navbar links -->
             <li class="w3-right w3-hide-small">
@@ -68,20 +71,10 @@
     </div>
 
     <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
         <script src="https://maps.googleapis.com/maps/api/js"></script>
     </environment>
