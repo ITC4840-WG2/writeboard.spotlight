@@ -10,6 +10,22 @@ body, html {
 		background-image: url("../Images/cover1.png");
 		min-height: 100%;
 }
+
+#wb-brand {
+    padding: 12px;
+}
+
+#wb-logo {
+    float: left;
+    height: 35px;
+    width: 35px;
+}
+
+#wb-title {
+    margin-left: 10px;
+    font-size: 19px;
+}
+
 .w3-navbar li a {
 		padding: 16px;
 		float: left;
