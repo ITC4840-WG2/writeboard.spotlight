@@ -5,10 +5,13 @@ body, html {
 }
 /* Full height image header */
 .bgimg-1 {
-		background-position: center;
-		background-size: cover;
-		background-image: url("../Images/cover1.png");
-		min-height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("../Images/cover1.png");
+    min-height: 100%;
 }
 
 #wb-brand {
