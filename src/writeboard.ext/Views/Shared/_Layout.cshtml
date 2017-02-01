@@ -1,63 +1,82 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=8" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"    />
     <title>@ViewData["Title"]</title>
+    <link runat="server" rel="shortcut icon" href="~/fav.ico" type="image/x-icon" />
+    <link runat="server" rel="icon" href="~/fav.ico" type="image/ico" />
 
     <environment names="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="~/css/site.css" />
     </environment>
     <environment names="Staging,Production">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
     </environment>
-    @Html.ApplicationInsightsJavaScript(TelemetryConfiguration)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #205081;">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img src="~/images/logo.png" style="float:left; height:50px; width:50px;"/><a asp-area="" asp-controller="External" asp-action="Index" class="navbar-brand">WriteBoard</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="External" asp-action="Demo">Live Demo</a></li>
-                </ul>
-            </div>
-        </div>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <ul class="w3-navbar w3-card-2" id="wb-navbar">
+            <li>
+                <a href="#home" class="w3-wide" id="wb-brand">
+                    <img src="~/images/logo.png" id="wb-logo" />
+                    <span id="wb-title">WriteBoard</span>
+                </a>
+            </li>
+            <!-- Right-sided navbar links -->
+            <li class="w3-right w3-hide-small">
+                <a href="#about">ABOUT</a>
+                <a href="#team"><i class="fa fa-user"></i> TEAM</a>
+                <a href="#work"><i class="fa fa-th"></i> WORK</a>
+                <a href="#pricing"><i class="fa fa-usd"></i> PRICING</a>
+                <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
+            </li>
+            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+            <li>
+                <a href="javascript:void(0)" class="w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+                    <i class="fa fa-bars w3-padding-right w3-padding-left"></i>
+                </a>
+            </li>
+        </ul>
     </div>
+    <!-- Sidenav on small screens when clicking the menu icon -->
+    <nav class="w3-sidenav w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="wb-side-nav">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-large w3-padding-16">Close ×</a>
+        <a href="#about" onclick="w3_close()">ABOUT</a>
+        <a href="#team" onclick="w3_close()">TEAM</a>
+        <a href="#work" onclick="w3_close()">WORK</a>
+        <a href="#pricing" onclick="w3_close()">PRICING</a>
+        <a href="#contact" onclick="w3_close()">CONTACT</a>
+    </nav>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2017 - WriteBoard</p>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+            <div class="w3-xlarge w3-section">
+                <p>&copy; 2017 - WriteBoard</p>
+            </div>
         </footer>
     </div>
 
     <environment names="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="~/js/site.js" asp-append-version="true"></script>
     </environment>
     <environment names="Staging,Production">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-        </script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
 
