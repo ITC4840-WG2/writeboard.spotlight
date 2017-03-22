@@ -27,18 +27,17 @@
     <div class="w3-top">
         <ul class="w3-navbar w3-card-2" id="wb-navbar">
             <li>
-                <a href="#home" class="w3-wide" id="wb-brand">
+                <div href="#home" id="wb-brand">
                     <img src="~/images/logo.png" id="wb-logo" />
                     <span id="wb-title">WriteBoard</span>
-                </a>
+                </div>
             </li>
             <!-- Right-sided navbar links -->
             <li class="w3-right w3-hide-small">
-                <a href="#about">ABOUT</a>
-                <a href="#work"><i class="fa fa-th"></i> EXAMPLES</a>
-                <a href="#team"><i class="fa fa-user"></i> TEAM</a>
-                <a href="#contact"><i class="fa fa-envelope"></i> CONTACT</a>
-                <a href="http://writeboard-app-tst.azurewebsites.net"></i>TRY THE DEMO</a>
+                <a href="#about"><i class="fa fa-info-circle"></i> About</a>
+                <a href="#features"><i class="fa fa-th"></i> Features</a>
+                <a href="#team"><i class="fa fa-user"></i> Team</a>
+                <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
             </li>
             <!-- Hide right-floated links on small screens and replace them with a menu icon -->
             <li>
@@ -52,8 +51,7 @@
     <nav class="w3-sidenav w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="wb-side-nav">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-large w3-padding-16">Close ×</a>
         <a href="#about" onclick="w3_close()">ABOUT</a>
-        <a href="#work" onclick="w3_close()">EXAMPLES</a>
-        <a href="http://writeboard-app-tst.azurewebsites.net" onclick="w3_close()">TRY THE DEMO</a>
+        <a href="#features" onclick="w3_close()">FEATURES</a>
         <a href="#team" onclick="w3_close()">TEAM</a>
         <a href="#contact" onclick="w3_close()">CONTACT</a>
     </nav>
@@ -62,8 +60,8 @@
         @RenderBody()
 
         <!-- Footer -->
-        <footer id="wb-footer" class=" w3-center w3-padding-64">
-            <a href="#home" class="w3-btn w3-padding w3-light-grey w3-hover-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <footer id="wb-footer">
+            &copy; 2017 - WriteBoard
         </footer>
     </div>
 
