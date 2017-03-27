@@ -3,12 +3,13 @@ body, html {
 		height: 100% !important;
 }
 /* Full height image header */
-.bgimg-1 {
+#wb-header {
     background-position: center;
     background-size: cover;
     background-image: url("/images/cover_header.jpg");
     min-height: 100%;
     padding-top: 25%;
+    margin-top: 54px;
 }
 
 #wb-brand {
