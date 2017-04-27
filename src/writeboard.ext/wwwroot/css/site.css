@@ -40,6 +40,21 @@ body, html {
     padding: 13px;
 }
 
+#wb-contact-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0,0,0,.5);
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#wb-contact-submit:hover {
+    background-color: darkgreen;
+}
+
 .w3-navbar li a {
 		padding: 16px;
 		float: left;
