@@ -9,7 +9,7 @@
         <span class="wb-header-subtitle w3-large">Collaborate on a surface that shares.</span>
         <p>
             <a href="@ViewBag.appURL" class="w3-btn w3-green w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">
-                Try a Live Demo Here
+                Try the Live Demo
             </a>
         </p>
     </div>
@@ -21,28 +21,31 @@
     <h3 class="w3-center"><i class="fa fa-info-circle"></i> About WriteBoard</h3>
     <p class="w3-center w3-large">Make Your Mark on a Large Surface from any Device.</p>
     <p class="w3-center w3-large">
-        Whiteboards are a valuable tool in any scenario that requires visual collaboration and information sharing. The main restriction of whiteboards is that they are intended to be erased and reused, losing any information that is recorded on them. Writing the information down can be time consuming and lead to inaccuracies when copying the information to another medium. In many cases, images will be captured using a smartphone at the conclusion of a meeting to be shared to participants. WriteBoard seeks to solve this issue by enabling a natural whiteboard experience from any input device, shared easily with a custom URL created by users. These are our application's key features:
+        Whiteboards are a valuable tool in any scenario that requires visual collaboration and information sharing. The main restriction of whiteboards is that they are intended to be erased and reused, losing any information that is recorded on them. Writing the information down can be time consuming and lead to inaccuracies when copying the information to another medium. In many cases, images will be captured using a smartphone at the conclusion of a meeting to be shared to participants. WriteBoard seeks to solve this issue by enabling a natural whiteboard experience from any input device, shared easily with a custom URL created by users.
     </p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-quarter">
-            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center w3-text-blue"></i>
-            <p class="w3-large">Responsive</p>
-            <p>Natural whiteboard collaboration experience with intuitive drawing, text and image import. WriteBoard canvases are easily shared through a unique URL</p>
+            <i class="fa fa-server w3-margin-bottom w3-jumbo w3-text-blue"></i>
+            <p class="w3-large">Deployable</p>
+            <p>Deployable to any enterprise environment with access to Azure cloud services</p>
         </div>
+       
         <div class="w3-quarter">
-            <i class="fa fa-heart w3-margin-bottom w3-jumbo w3-text-blue"></i>
-            <p class="w3-large">Passion</p>
-            <p>Project utilizes Azure cloud services combined with the latest web and database technologies available: SQL Server 2016, PHP7 and JIRA.</p>
+            <i class="fa fa-pencil w3-margin-bottom w3-jumbo w3-center w3-text-blue"></i>
+            <p class="w3-large">Simple</p>
+            <p>Natural whiteboard collaboration experience with intuitive drawing and text tools</p>
         </div>
+
         <div class="w3-quarter">
-            <i class="fa fa-diamond w3-margin-bottom w3-jumbo w3-text-blue"></i>
-            <p class="w3-large">Design</p>
-            <p>Intuitive input tools will be available for drawing, erasing and text/image import.</p>
+            <i class="fa fa-share w3-margin-bottom w3-jumbo w3-center w3-text-blue"></i>
+            <p class="w3-large">Shareable</p>
+            <p>WriteBoard canvases are easily shared through a personalized URL</p>
         </div>
+
         <div class="w3-quarter">
-            <i class="fa fa-cog w3-margin-bottom w3-jumbo w3-text-blue"></i>
-            <p class="w3-large">Support</p>
-            <p>Deployable into any enterprise environment with access to Azure cloud services.</p>
+            <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-text-blue"></i>
+            <p class="w3-large">Huge</p>
+            <p>High resolution drawing surfaces, from any device</p>
         </div>
     </div>
 </div>
@@ -52,11 +55,11 @@
     <p class="w3-center w3-large">Illustrate and Collaborate in Style.</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
         <div class="w3-half">
-            <img src="~/images/123.png" style="width:50%" onclick="onClick(this)" class="w3-hover-opacity">
+            <img src="~/images/register.png" style="width:50%" onclick="onClick(this)" class="w3-hover-opacity">
             <p class="w3-large">Quick and Easy Registrtion Process</p>
         </div>
         <div class="w3-half">
-            <img src="~/images/234.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+            <img src="~/images/app.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
             <p class="w3-large">Large Drawing Surface, up to a 4K Resolution</p>
         </div>
     </div>
@@ -73,21 +76,9 @@
 
 <!-- Promo Section "Statistics" -->
 <div class="w3-container w3-row w3-center w3-padding-64">
-    <div class="w3-quarter">
-        <span class="w3-xxlarge">@ViewBag.wbcount</span>
-        <br>Partners
-    </div>
-    <div class="w3-quarter">
-        <span class="w3-xxlarge">60%</span>
-        <br>Project Progress
-    </div>
-    <div class="w3-quarter">
-        <span class="w3-xxlarge">0+</span>
-        <br>Happy Clients
-    </div>
-    <div class="w3-quarter">
-        <span class="w3-xxlarge">50+</span>
-        <br>Meetings
+    <div class="w3-center">
+        <span class="w3-xxxlarge">@ViewBag.wbcount</span>
+        <br>Live Demo Registrations and Counting
     </div>
 </div>
 
@@ -158,7 +149,7 @@
                 <div class="row">
                     <label>
                         <i class="fa fa-user"></i>
-                        <b>Name</b>
+                        <b>Full Name</b>
                     </label>
                     <input type="text" class="w3-input w3-border" id="wb-name" runat="server" placeholder="Contact Full Name" name="wb-name" required>
                 </div>

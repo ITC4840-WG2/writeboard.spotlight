@@ -41,7 +41,7 @@ namespace writeboard.ext.Controllers
                 message.To.Add(new MailboxAddress("writeboard-team", "writeboard-team@outlook.com"));
                 message.Subject = "WriteBoard - Contact";
                 var bodyBuilder = new BodyBuilder();
-                bodyBuilder.HtmlBody = "<b>" + contactName + " Sent:</b><p><p>" + contactSubject + "<p><p>" + contactMsg + "<p> Respond to: mailto://" + contactEmail;
+                bodyBuilder.HtmlBody = "<b>" + contactName + " Sent:</b><p><p>" + contactSubject + "<p><p>" + contactMsg + "<p> Respond to: <a href='mailto://" + contactEmail + "'>" + contactEmail + "</a>";
                 message.Body = bodyBuilder.ToMessageBody();
 
                 using (var client = new SmtpClient())
@@ -52,8 +52,6 @@ namespace writeboard.ext.Controllers
                     client.Send(message);
                     client.Disconnect(true);
                 }
-
-                Response.Redirect("/");
             }
 
             //get writeboard unique registration count

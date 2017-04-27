@@ -21,6 +21,12 @@ function initialize() {
 
 google.maps.event.addDomListener(window, 'load', initialize);
 
+var contactButton = document.getElementById('wb-contact-submit');
+contactButton.addEventListener("click", contactSubmit); 
+function contactSubmit() {
+    contactButton.innerHTML = "Thanks for reaching out, we'll be in touch!";
+}
+
 // Modal Image Gallery
 function onClick(element) {
     document.getElementById("img01").src = element.src;
@@ -28,7 +34,6 @@ function onClick(element) {
     var captionText = document.getElementById("caption");
     captionText.innerHTML = element.alt;
 }
-
 
 // Toggle between showing and hiding the sidenav when clicking the menu icon
 var mySidenav = document.getElementById("wb-side-nav");
