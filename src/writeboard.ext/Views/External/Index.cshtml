@@ -152,20 +152,51 @@
             <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Boston, US
             <p>
             <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 8573344095</p>
-            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: \ WhiteBoard@gmail.com</p>
+            <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: <a href="mailto://writeboard-team@outlook.com">writeboard-team@outlook.com</a></p>
             <br>
-            <form action="mailto:tinaung.w@husky.neu.edu" method="post" enctype="text/plain">
-                <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-                <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-                <p>
-                    <button class="w3-btn w3-padding w3-red" type="submit">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </p>
+            <form action="/contact" method="post">
+                <div class="row">
+                    <label>
+                        <i class="fa fa-user"></i>
+                        <b>Name</b>
+                    </label>
+                    <input type="text" class="w3-input w3-border" id="wb-name" runat="server" placeholder="Contact Full Name" name="wb-name" required>
+                </div>
+                <p></p>
+
+                <div class="row">
+                    <label>
+                        <i class="fa fa-envelope"></i>
+                        <b>Email Address</b>
+                    </label>
+                    <input type="email" class="w3-input w3-border" id="wb-email" runat="server" TextMode="Email" placeholder="Contact Email" name="wb-email" required>
+                </div>
+                <p></p>
+
+                <div class="row">
+                    <label>
+                        <i class="fa fa-info-circle"></i>
+                        <b>Subject</b>
+                    </label>
+                    <input type="text" class="w3-input w3-border" id="wb-subject" runat="server" placeholder="Message Subject" name="wb-subject" required>
+                </div>
+                <p></p>
+
+                <div class="row">
+                    <label>
+                        <i class="fa fa-align-left"></i>
+                        <b>Message</b>
+                    </label>
+                    <input type="text" class="w3-input w3-border" id="wb-msg" runat="server" placeholder="Message Body" name="wb-msg" required>
+                </div>
+                <p></p>
+
+                <button id="wb-contact-submit" type="submit">
+                    <i class="fa fa-paper-plane"></i> Send Message
+                </button>
             </form>
         </div>
+
         <div class="w3-half">
             <!-- Add Google Maps -->
             <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
