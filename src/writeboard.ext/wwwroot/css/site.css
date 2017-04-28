@@ -55,6 +55,12 @@ body, html {
     background-color: darkgreen;
 }
 
+.wb-team-member {
+    background-color: #205081;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0,0,0,.5);
+}
+
 .w3-navbar li a {
 		padding: 16px;
 		float: left;
