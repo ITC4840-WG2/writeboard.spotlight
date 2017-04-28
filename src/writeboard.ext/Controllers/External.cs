@@ -17,13 +17,13 @@ namespace writeboard.ext.Controllers
         {
             //get current url, set app url
             ViewBag.currentURL = getCurrentURL(HttpContext);
-            if (ViewBag.currentURL.IndexOf("writeboard.net") >= 0) 
+            if (ViewBag.currentURL.IndexOf("tst") >= 0) 
             {
-                ViewBag.appURL = "http://app.writeboard.net";
+                ViewBag.appURL = "http://writeboard-app-tst.azurewebsites.net";
             }
             else
             {
-                ViewBag.appURL = "http://writeboard-app-tst.azurewebsites.net";
+                ViewBag.appURL = "http://app.writeboard.net";
             }
 
             //process contact us action
