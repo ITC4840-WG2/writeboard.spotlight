@@ -16,8 +16,8 @@ namespace writeboard.ext.Controllers
         public IActionResult Index(string wbAction)
         {
             //get current url, set app url
-            string currentURL = getCurrentURL(HttpContext);
-            if (currentURL == "http://writeboard.net")
+            ViewBag.currentURL = getCurrentURL(HttpContext);
+            if (ViewBag.currentURL.toString().IndexOf("writeboard.net") >= 0) 
             {
                 ViewBag.appURL = "http://app.writeboard.net";
             }
